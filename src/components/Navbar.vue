@@ -1,25 +1,20 @@
 <template>
-<b-navbar toggleable="lg" type="dark" variant="info">
+<div>
+  <b-navbar type="dark" variant="dark">
     <div class="container">
-    <b-navbar-brand href="/">Data</b-navbar-brand>
+    <b-navbar-nav>
+      <b-nav-item href="/">Beranda</b-nav-item>
 
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <!-- Navbar dropdowns -->
 
-    <b-collapse id="nav-collapse" is-nav>
- 
-      <!-- Right aligned nav items -->
-      <b-navbar-nav>
-        <b-nav-item-dropdown right>
-          <!-- Using 'button-content' slot -->
-          <template #button-content>
-              <em>Data Negara</em>
-          </template>
-          <b-dropdown-item href="/chart">Lihat Grafik</b-dropdown-item>
-        </b-nav-item-dropdown>
-      </b-navbar-nav>
-    </b-collapse>
+      <b-nav-item-dropdown text="Data Negara" right>
+        <b-dropdown-item href="/chart">Lihat Chart</b-dropdown-item>
+      
+      </b-nav-item-dropdown>
+    </b-navbar-nav>
     </div>
   </b-navbar>
+</div>
 </template>
 
 <script>
