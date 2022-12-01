@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-  
-    <form @submit.prevent="add">
+    <v-facebook-login app-id="687646526313011"></v-facebook-login>
+    <!-- <form @submit.prevent="add">
       <div class="form-group">
          <input type="hidden" v-model="form.id">
       </div>
@@ -23,10 +23,6 @@
       <button type="submit" v-show="!updateSubmit" class="btn btn-primary">Tambah</button>
       <button type="button" v-show="updateSubmit" @click="update(form)" class="btn btn-primary">Update</button>
       </form>
-
-
-
-
        <div class="table-responsive mt-2">
           <table class="table table-hover table-bordered">
               <thead>
@@ -49,14 +45,17 @@
                 </tr>
              </tbody>
          </table>
-        </div>
+      </div> -->
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-
+import VFacebookLogin from 'vue-facebook-login-component'
 export default {
+  components:{
+    VFacebookLogin
+  },
   data(){
     return{
       form:{

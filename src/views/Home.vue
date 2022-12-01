@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Navbar/>
+    <!-- <Navbar/> -->
     <tabelpemesan/>
   </div>
 </template>
